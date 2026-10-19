@@ -1,4 +1,4 @@
-﻿さくらナースリー 5ページ版（2026-10-19 表示が古いままにならないよう調整）
+﻿さくらナースリー 5ページ版（2026-10-19 トップページにInstagramを追加）
 
 index.html / about.html / life.html / guide.html / news.html … 5ページ
 style.css            全ページ共通のデザイン
