@@ -1112,3 +1112,120 @@ td small{ color:var(--ink-soft); }
 .phero .pic--sub{ width:34%; }
 .c-b img, .c-c img{ aspect-ratio:4/3; }
 .c-a{ align-self:stretch; } .c-a img{ height:100%; aspect-ratio:auto; min-height:100%; object-fit:cover; }
+
+
+/* =========================================================
+   さくらナースリーらしい「やわらかい」見た目（2026-10-19 第2版）
+   0・1・2歳の小さな子どもの園として、角を取り、色を淡く、影をふんわりさせる。
+   西遊馬保育園との違い：三角の旗・テープ・傾き・水玉・波線なし。
+   ========================================================= */
+:root{
+  --ink:#5b4446; --ink-soft:#8a7275; --deep:#c25a72; --deep-d:#a84a61; --bg:#fffafa; --line:#f5e1e3;
+  --soft:0 16px 36px rgba(212,105,123,.13);
+  --soft-sm:0 8px 20px rgba(212,105,123,.10);
+}
+body{ font-family:var(--round); font-weight:500; }
+.bunting{ display:none !important; }
+
+/* セクションの境目：ふんわりした雲のふち */
+.pink-sec{ --wave-up:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 34 L0 26 C 10 10 90 10 100 26 C 108 4 176 4 185 26 C 197 6 293 6 305 26 C 312 4 368 4 375 26 C 382 10 438 10 445 26 C 454 4 530 4 540 26 C 547 4 603 4 610 26 C 620 6 700 6 710 26 C 720 4 796 4 805 26 C 812 10 868 10 875 26 C 884 4 960 4 970 26 C 978 6 1046 6 1055 26 C 1062 4 1118 4 1125 26 C 1132 6 1188 6 1195 26 C 1196 8 1200 8 1200 26 L1200 34 Z' fill='%23faebec'/></svg>"); --wave-down:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 0 L0 8 C 12 30 108 30 120 8 C 130 24 206 24 215 8 C 227 26 323 26 335 8 C 347 28 443 28 455 8 C 464 30 540 30 550 8 C 560 30 636 30 645 8 C 654 24 722 24 730 8 C 738 24 806 24 815 8 C 824 28 900 28 910 8 C 922 30 1018 30 1030 8 C 1040 30 1116 30 1125 8 C 1132 30 1192 30 1200 8 L1200 0 Z' fill='%23faebec'/></svg>"); }
+.white-sec{ --wave-up:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 34 L0 26 C 10 10 90 10 100 26 C 108 4 176 4 185 26 C 197 6 293 6 305 26 C 312 4 368 4 375 26 C 382 10 438 10 445 26 C 454 4 530 4 540 26 C 547 4 603 4 610 26 C 620 6 700 6 710 26 C 720 4 796 4 805 26 C 812 10 868 10 875 26 C 884 4 960 4 970 26 C 978 6 1046 6 1055 26 C 1062 4 1118 4 1125 26 C 1132 6 1188 6 1195 26 C 1196 8 1200 8 1200 26 L1200 34 Z' fill='%23ffffff'/></svg>"); --wave-down:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 0 L0 8 C 12 30 108 30 120 8 C 130 24 206 24 215 8 C 227 26 323 26 335 8 C 347 28 443 28 455 8 C 464 30 540 30 550 8 C 560 30 636 30 645 8 C 654 24 722 24 730 8 C 738 24 806 24 815 8 C 824 28 900 28 910 8 C 922 30 1018 30 1030 8 C 1040 30 1116 30 1125 8 C 1132 30 1192 30 1200 8 L1200 0 Z' fill='%23ffffff'/></svg>"); }
+.sky-sec{ --wave-up:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 34 L0 26 C 10 10 90 10 100 26 C 108 4 176 4 185 26 C 197 6 293 6 305 26 C 312 4 368 4 375 26 C 382 10 438 10 445 26 C 454 4 530 4 540 26 C 547 4 603 4 610 26 C 620 6 700 6 710 26 C 720 4 796 4 805 26 C 812 10 868 10 875 26 C 884 4 960 4 970 26 C 978 6 1046 6 1055 26 C 1062 4 1118 4 1125 26 C 1132 6 1188 6 1195 26 C 1196 8 1200 8 1200 26 L1200 34 Z' fill='%23eef6f9'/></svg>"); --wave-down:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 0 L0 8 C 12 30 108 30 120 8 C 130 24 206 24 215 8 C 227 26 323 26 335 8 C 347 28 443 28 455 8 C 464 30 540 30 550 8 C 560 30 636 30 645 8 C 654 24 722 24 730 8 C 738 24 806 24 815 8 C 824 28 900 28 910 8 C 922 30 1018 30 1030 8 C 1040 30 1116 30 1125 8 C 1132 30 1192 30 1200 8 L1200 0 Z' fill='%23eef6f9'/></svg>"); }
+.yel-sec{ --wave-up:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 34 L0 26 C 10 10 90 10 100 26 C 108 4 176 4 185 26 C 197 6 293 6 305 26 C 312 4 368 4 375 26 C 382 10 438 10 445 26 C 454 4 530 4 540 26 C 547 4 603 4 610 26 C 620 6 700 6 710 26 C 720 4 796 4 805 26 C 812 10 868 10 875 26 C 884 4 960 4 970 26 C 978 6 1046 6 1055 26 C 1062 4 1118 4 1125 26 C 1132 6 1188 6 1195 26 C 1196 8 1200 8 1200 26 L1200 34 Z' fill='%23fdf7dc'/></svg>"); --wave-down:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 0 L0 8 C 12 30 108 30 120 8 C 130 24 206 24 215 8 C 227 26 323 26 335 8 C 347 28 443 28 455 8 C 464 30 540 30 550 8 C 560 30 636 30 645 8 C 654 24 722 24 730 8 C 738 24 806 24 815 8 C 824 28 900 28 910 8 C 922 30 1018 30 1030 8 C 1040 30 1116 30 1125 8 C 1132 30 1192 30 1200 8 L1200 0 Z' fill='%23fdf7dc'/></svg>"); }
+.pur-sec{ --wave-up:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 34 L0 26 C 10 10 90 10 100 26 C 108 4 176 4 185 26 C 197 6 293 6 305 26 C 312 4 368 4 375 26 C 382 10 438 10 445 26 C 454 4 530 4 540 26 C 547 4 603 4 610 26 C 620 6 700 6 710 26 C 720 4 796 4 805 26 C 812 10 868 10 875 26 C 884 4 960 4 970 26 C 978 6 1046 6 1055 26 C 1062 4 1118 4 1125 26 C 1132 6 1188 6 1195 26 C 1196 8 1200 8 1200 26 L1200 34 Z' fill='%23f3eff5'/></svg>"); --wave-down:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 0 L0 8 C 12 30 108 30 120 8 C 130 24 206 24 215 8 C 227 26 323 26 335 8 C 347 28 443 28 455 8 C 464 30 540 30 550 8 C 560 30 636 30 645 8 C 654 24 722 24 730 8 C 738 24 806 24 815 8 C 824 28 900 28 910 8 C 922 30 1018 30 1030 8 C 1040 30 1116 30 1125 8 C 1132 30 1192 30 1200 8 L1200 0 Z' fill='%23f3eff5'/></svg>"); }
+.wave-top::before, .wave-bottom::after{ height:36px; }
+.wave-top::before{ top:-35px; } .wave-bottom::after{ bottom:-35px; }
+
+/* 見出し：下線の代わりに、花のマークを上に */
+.h2{ color:var(--ink); letter-spacing:.08em; }
+.h2::after{ display:none; }
+.h2::before{ content:""; display:block; width:40px; height:37px; margin:0 auto .45em;
+  background:url("sakura-flower.png") center / contain no-repeat; animation:sakura-sway 4s ease-in-out infinite alternate; }
+@keyframes sakura-sway{ from{ transform:rotate(-8deg); } to{ transform:rotate(8deg); } }
+.cta .h2::before{ filter:none; }
+.num{ color:var(--deep); }
+.h3-pill{ border:0; background:var(--pink4); color:var(--deep); }
+.lede{ color:var(--ink-soft); }
+
+/* 写真：テープも傾きもなし。角をまるく、ふんわりした影 */
+.pic::before, .pola::before{ display:none !important; }
+.pic{ padding:0; background:none; border-radius:44px; overflow:hidden; box-shadow:var(--soft); transform:none !important; }
+.pic img{ border-radius:inherit; }
+.c-a{ border-radius:46% 54% 44% 56% / 52% 46% 54% 48%; }
+.c-b{ border-radius:50%; } .c-b img{ aspect-ratio:1/1; }
+.c-c{ border-radius:40px 40px 40px 120px; }
+.c-d{ border-radius:999px; }
+.fv__photo::before{ content:""; position:absolute; z-index:-1; width:70%; aspect-ratio:1; right:-8%; top:-6%;
+  border-radius:50%; background:radial-gradient(circle at 40% 40%, #fff 0, var(--pink3) 70%); opacity:.8; }
+.fv__grid{ isolation:isolate; }
+.fv__badge{ background:#fff !important; border-radius:50%; color:var(--deep); transform:none; box-shadow:var(--soft-sm);
+  width:118px; height:118px; outline:3px solid var(--pink3); outline-offset:-10px; }
+.fv__badge b{ color:var(--deep); }
+.pic--main{ border-radius:48% 52% 42% 58% / 50% 44% 56% 50%; }
+.pic--sub{ border-radius:50%; border:6px solid #fff; }
+.phero__ttl{ background:linear-gradient(transparent 70%, var(--pink3) 70%); }
+.lead em{ background:linear-gradient(transparent 66%, var(--pink3) 66%) !important; }
+.fv__place{ color:var(--deep) !important; box-shadow:none; background:#fff; }
+.fv .tags li{ border:0 !important; background:#fff; box-shadow:var(--soft-sm); }
+
+/* ボタン：かたい影をやめて、ふんわり浮かせる */
+.btn--tel{ background:var(--deep); box-shadow:0 12px 26px rgba(194,90,114,.28); }
+.btn--tel:hover{ transform:translateY(-2px); box-shadow:0 16px 30px rgba(194,90,114,.32); background:var(--deep-d); }
+.btn--visit{ background:#fff; border:2px solid var(--pink2); color:var(--deep); box-shadow:var(--soft-sm); }
+.btn--visit:hover{ transform:translateY(-2px); box-shadow:var(--soft); background:var(--pink4); }
+.btn:active{ transform:translateY(0); }
+.linkbtn{ border-color:var(--pink2); }
+.linkbtn:hover{ background:var(--pink4); color:var(--deep); }
+.gn__a.is-cur{ background:var(--pink4); color:var(--deep); }
+.gn__cta{ background:var(--deep); }
+.gn__recruit{ border-color:var(--pink2); }
+
+/* 枠線をやめて、やわらかいカードに */
+.fcard, .day, .tablebox, .feecard, .what, .entry, .tile{ border:0 !important; box-shadow:var(--soft); }
+.fcard, .tile, .feecard, .what, .box, .news, .entry{ border-radius:40px; }
+.fcard__body{ border-top:0 !important; }
+.tablebox{ border-radius:32px; }
+.day{ border-radius:40px; }
+.day .day__head{ background:var(--c4, var(--pink4)) !important; }
+.day ol::before{ border-left-style:solid; opacity:.6; }
+.tile{ padding:14px; background:#fff; }
+.tile img{ border-radius:30px; }
+.tile__t{ border-top:0; padding:14px 8px 4px; }
+.tile:hover{ transform:translateY(-4px); }
+.more{ border-radius:30px; box-shadow:var(--soft-sm); }
+.news li{ border-bottom-style:solid; }
+.box, .news{ box-shadow:var(--soft); }
+.feecard__h{ background:var(--c4, var(--pink4)); }
+.about-photo{ border:0; border-radius:44px; box-shadow:var(--soft); }
+
+/* 行事の写真・流れる写真：まるい形に */
+.pola{ transform:none !important; padding:0; background:none; box-shadow:none; text-align:center; }
+.pola img{ border-radius:50%; aspect-ratio:1/1; box-shadow:var(--soft); border:6px solid #fff; }
+.pola figcaption{ justify-content:center; margin-top:12px; }
+.pola:hover{ transform:translateY(-4px) !important; }
+.strip__item{ transform:none !important; width:200px; background:none; box-shadow:none; padding:0; }
+.strip__item img{ border-radius:50%; aspect-ratio:1/1; border:6px solid #fff; box-shadow:var(--soft-sm); }
+.strip__ttl{ color:var(--ink); }
+.strip__ttl::before{ content:""; display:block; width:34px; height:31px; margin:0 auto .3em; background:url("sakura-flower.png") center / contain no-repeat; }
+
+/* 最後のご相談：濃いピンクの帯 → 淡いピンクの大きなカード */
+.cta{ background:transparent; color:var(--ink); padding:40px 24px 96px; }
+.cta .wrap{ background:linear-gradient(160deg, #fff 0%, var(--pink4) 55%, var(--pink3) 100%); border-radius:56px; padding:64px 32px 56px; box-shadow:var(--soft); max-width:900px; }
+.cta .h2{ color:var(--ink); }
+.cta .lede{ color:var(--ink-soft); }
+.cta .note{ color:var(--ink-soft); }
+.cta .btn--tel{ background:var(--deep); color:#fff; box-shadow:0 12px 26px rgba(194,90,114,.28); }
+.cta .btn--visit{ background:#fff; color:var(--deep); border-color:var(--pink2); box-shadow:var(--soft-sm); }
+.cta .float{ color:var(--pink2) !important; opacity:.6; }
+@media (max-width:760px){ .cta .wrap{ border-radius:40px; padding:48px 18px 40px; } }
+
+/* フッター：上のふちを雲の形に */
+.footer{ position:relative; margin-top:36px; }
+.footer::before{ content:""; position:absolute; left:0; right:0; top:-35px; height:36px; background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'><path d='M0 34 L0 26 C 10 10 90 10 100 26 C 108 4 176 4 185 26 C 197 6 293 6 305 26 C 312 4 368 4 375 26 C 382 10 438 10 445 26 C 454 4 530 4 540 26 C 547 4 603 4 610 26 C 620 6 700 6 710 26 C 720 4 796 4 805 26 C 812 10 868 10 875 26 C 884 4 960 4 970 26 C 978 6 1046 6 1055 26 C 1062 4 1118 4 1125 26 C 1132 6 1188 6 1195 26 C 1196 8 1200 8 1200 26 L1200 34 Z' fill='%2316304f'/></svg>") no-repeat; background-size:100% 100%; }
+.footer__logo{ border-radius:24px; }
+
+/* 浮かぶ飾りは、ハートと花びらだけにして淡く */
+.float{ opacity:.7; }
+.header::after, .callbar::before{ background:var(--pink3); height:3px; bottom:-3px; }
+.callbar::before{ top:-3px; }
+.float.is-yel{ color:var(--pink2) !important; }
