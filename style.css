@@ -1058,13 +1058,57 @@ td small{ color:var(--ink-soft); }
 .hagu__item:nth-child(even){ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
 @media (max-width:720px){ .hagu__item:nth-child(even){ grid-template-columns:minmax(0,1fr); } }
 
-/* さくらの花を背景にうすくちりばめる（2026-10-19） */
-.dots{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(224,151,160,.28) 3px, transparent 3.5px); background-size:600px 600px, 28px 28px; }
-.tint-sky{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(156,193,207,.5) 3px, transparent 3.5px) !important; background-size:600px 600px, 28px 28px; background-position:180px 90px, 0 0; }
-.tint-yel{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(228,201,57,.35) 3px, transparent 3.5px) !important; background-size:600px 600px, 28px 28px; background-position:320px 200px, 0 0; }
-.tint-pur{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(185,170,192,.45) 3px, transparent 3.5px) !important; background-size:600px 600px, 28px 28px; background-position:60px 300px, 0 0; }
-.section--white, .strip{ background-image:url("sakura-bg.png"); background-size:600px 600px; background-position:240px 140px; }
-@media (max-width:760px){
-  .dots, .tint-sky, .tint-yel, .tint-pur{ background-size:420px 420px, 28px 28px; }
-  .section--white, .strip{ background-size:420px 420px; }
+/* =========================================================
+   さくらの花を背景にうすくちりばめ、ゆっくり動かす（2026-10-19）
+   ・方眼のような水玉は使わない
+   ・いちばん上（ヒーロー）には入れない
+   ========================================================= */
+.dots, .tint-sky, .tint-yel, .tint-pur, .section--white, .strip{
+  background-image:url("sakura-bg.png") !important;
+  background-size:600px 600px !important;
+  background-repeat:repeat;
+  animation:sakura-drift 90s linear infinite;
 }
+.tint-yel{ animation-delay:-30s; }
+.tint-sky{ animation-delay:-55s; }
+.tint-pur{ animation-delay:-75s; }
+.section--white{ animation-delay:-15s; }
+.strip{ animation-delay:-45s; }
+@keyframes sakura-drift{
+  from{ background-position:0 0; }
+  to  { background-position:600px 600px; }   /* 1枚ぶん右下へ流れて、つなぎ目なくくり返す */
+}
+.fv.dots, .phero.dots{ background-image:none !important; animation:none; }
+@media (max-width:760px){
+  .dots, .tint-sky, .tint-yel, .tint-pur, .section--white, .strip{ background-size:420px 420px !important; animation-name:sakura-drift-sp; }
+  @keyframes sakura-drift-sp{ from{ background-position:0 0; } to{ background-position:420px 420px; } }
+}
+@media (prefers-reduced-motion: reduce){
+  .dots, .tint-sky, .tint-yel, .tint-pur, .section--white, .strip{ animation:none; }
+}
+
+/* =========================================================
+   ヒーロー：写真を大きく、文字は小さめに（2026-10-19）
+   ========================================================= */
+.fv__grid{ max-width:1240px; grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr); gap:44px; padding-top:48px; }
+.fv .lead{ font-size:clamp(1.9rem, 3.4vw, 2.75rem); line-height:1.5; }
+.fv__place{ font-size:.82rem; }
+.fv__text{ font-size:.9rem; line-height:1.9; }
+.fv .tags li{ font-size:.8rem; }
+.fv .btn{ font-size:.95rem; }
+.collage{ gap:18px; }
+.phero__grid{ max-width:1200px; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); }
+.phero__photo{ max-width:640px; }
+.phero__ttl{ font-size:clamp(1.8rem, 3.6vw, 2.5rem); }
+.phero__lead{ font-size:.9rem; line-height:1.9; }
+@media (max-width:860px){
+  .fv__grid{ grid-template-columns:minmax(0,1fr); }
+  .fv__photo{ width:100%; max-width:620px; }
+  .phero__grid{ grid-template-columns:minmax(0,1fr); }
+  .phero__photo{ width:92%; }
+}
+.c-a img{ aspect-ratio:1/1; }
+.c-d img{ aspect-ratio:3/1; }
+.phero .pic--sub{ width:34%; }
+.c-b img, .c-c img{ aspect-ratio:4/3; }
+.c-a{ align-self:stretch; } .c-a img{ height:100%; aspect-ratio:auto; min-height:100%; object-fit:cover; }
