@@ -1,14 +1,11 @@
-﻿さくらナースリー 5ページ版（2026-10-19）
+﻿さくらナースリー 5ページ版（2026-10-19 背景に花の模様を追加）
 
-index.html  HOME
-about.html  当園について（特色・施設概要）
-life.html   園での生活（さくらの1日・年間スケジュール）
-guide.html  入園案内（保育料・給食費・よくあるご質問）
-news.html   お知らせ
-style.css   全ページ共通のデザイン（西遊馬保育園と同じもの＋さくら用の追加）
-logo-hakushinkai.png  博滇会グループのマーク
-robots.txt  お試しのあいだ検索に出さないための設定（本番では削除）
+index.html / about.html / life.html / guide.html / news.html … 5ページ
+style.css            全ページ共通のデザイン
+logo-sakura.png      さくらナースリーのロゴ
+logo-hakushinkai.png 博滇会グループのマーク
+sakura-bg.png        背景にうすくちりばめた花の模様
+robots.txt           お試しのあいだ検索に出さないための設定（本番では削除）
 
-写真とロゴは、いまの博滇会サイト（hakushinkai.jp）にあるものをそのまま読み込んでいます。
-インターネットにつながったパソコンで index.html を開くと、写真入りで見られます。
-すべて同じフォルダに置いたまま開いてください。文字コードは UTF-8 です。
+写真は、いまの博滇会サイト（hakushinkai.jp）にあるものを読み込んでいます。
+GitHubに入れるときは、フォルダの中身（12個）を全部入れてください。

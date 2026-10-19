@@ -1057,3 +1057,14 @@ td small{ color:var(--ink-soft); }
 .features--3 .fcard__pic img{ object-fit:contain; }
 .hagu__item:nth-child(even){ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
 @media (max-width:720px){ .hagu__item:nth-child(even){ grid-template-columns:minmax(0,1fr); } }
+
+/* さくらの花を背景にうすくちりばめる（2026-10-19） */
+.dots{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(224,151,160,.28) 3px, transparent 3.5px); background-size:600px 600px, 28px 28px; }
+.tint-sky{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(156,193,207,.5) 3px, transparent 3.5px) !important; background-size:600px 600px, 28px 28px; background-position:180px 90px, 0 0; }
+.tint-yel{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(228,201,57,.35) 3px, transparent 3.5px) !important; background-size:600px 600px, 28px 28px; background-position:320px 200px, 0 0; }
+.tint-pur{ background-image:url("sakura-bg.png"), radial-gradient(circle, rgba(185,170,192,.45) 3px, transparent 3.5px) !important; background-size:600px 600px, 28px 28px; background-position:60px 300px, 0 0; }
+.section--white, .strip{ background-image:url("sakura-bg.png"); background-size:600px 600px; background-position:240px 140px; }
+@media (max-width:760px){
+  .dots, .tint-sky, .tint-yel, .tint-pur{ background-size:420px 420px, 28px 28px; }
+  .section--white, .strip{ background-size:420px 420px; }
+}
